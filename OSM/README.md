@@ -263,6 +263,6 @@ change ~line#20-21 to comment the CONFIG parameter, such as:
         #CONFIG "PROJ_LIB" "/cygdrive/c/ms4w/apps/osm/basemaps"
 
 ## 9. Test the OSM Mapfile.
-http://localhost/cgi-bin/mapserv.exe?mode=browse&template=openlayers&layers=all&map=C:/ms4w/apps/osm/basemaps/osm-google.map
+http://localhost/cgi-bin/mapserv.exe?mode=browse&template=openlayers&layers=all&map=C:/ms4w/apps/osm/basemaps/osm-google.map .
 
 ![](./img/mapa.png)  
