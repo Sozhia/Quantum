@@ -55,7 +55,7 @@ Just download the .exe and install it without adding anything else than default 
 ![](./img/instalacion_ms4w_2.PNG)  
 ![](./img/instalacion_ms4w_3.PNG)  
 ![](./img/instalacion_ms4w_4.PNG)  
-![](./img/instalacion_ms4w_5.PNG)
+![](./img/instalacion_ms4w_5.PNG)  
 ![](./img/instalacion_ms4w_6.PNG)  
 ![](./img/instalacion_ms4w_7.PNG)  
 
@@ -71,55 +71,55 @@ Just click `Next` through the first few Setup wizard steps.
 ![](./img/instalacion_postgre_1.PNG)  
 ![](./img/instalacion_postgre_2.PNG)  
 ![](./img/instalacion_postgre_3.PNG)  
- We will use `postgres` at password screen.
+ We will use `postgres` at password screen.  
  ![](./img/instalacion_postgre_4.PNG)  
- As a default, PostgreSQL installation sets up both a PostgreSQL superuser named `postgres` and a Windows system user account named `postgres` that will use the same password.
- Click `Next` through the rest of the Setup Wizard.
+ As a default, PostgreSQL installation sets up both a PostgreSQL superuser named `postgres` and a Windows system user account named `postgres` that will use the same password.  
+ Click `Next` through the rest of the Setup Wizard.  
  ![](./img/instalacion_postgre_5.PNG)  
  ![](./img/instalacion_postgre_6.PNG)  
  ![](./img/instalacion_postgre_7.PNG)  
  ![](./img/instalacion_postgre_8.PNG)  
  ![](./img/instalacion_postgre_9.PNG)  
- The last step of the Setup wizard should ask if you want to launch `Stack builder`, make sure that the checkbox is checked and finish the installation.
+ The last step of the Setup wizard should ask if you want to launch `Stack builder`, make sure that the checkbox is checked and finish the installation.  
  ![](./img/instalacion_postgre_10.PNG)  
-On the first page of the `Stack Builder` window, in the drop down, select `PostgreSQL on port 5432`.
+On the first page of the `Stack Builder` window, in the drop down, select `PostgreSQL on port 5432`.  
 ![](./img/instalacion_postgre_11.PNG)  
 
-On the next page, click on the `+` sign next to `Spatial Extensions`.Check the box next to `PostGIS X.X for PostgreSQL your-version`.
+On the next page, click on the `+` sign next to `Spatial Extensions`.Check the box next to `PostGIS X.X for PostgreSQL your-version`.  
 ![](./img/instalacion_postgre_12.PNG)  
-Click `Next` until presented with the `PostGIS X.X` setup window.
+Click `Next` until presented with the `PostGIS X.X` setup window.  
 ![](./img/instalacion_postgre_13.PNG)  
 ![](./img/instalacion_postgre_14.PNG)  
 
 #### 1.5.2. Install  PostGIS
-Start the installer through the `Stack Builder` or the standalone installer. Click on `I Agree`.
+Start the installer through the `Stack Builder` or the standalone installer. Click on `I Agree`.  
 ![](./img/instalacion_postgre_15.PNG)  
-Make sure `Create Database` is not selected.
+Make sure `Create Database` is not selected.  
 ![](./img/instalacion_postgre_16.PNG)  
-Click `Next` until you get to a `Database Connection` page.
+Click `Next` until you get to a `Database Connection` page.  
 ![](./img/instalacion_postgre_17.PNG)  
-Enter `postgres` for the password and click `Next`.
+Enter `postgres` for the password and click `Next`.  
 ![](./img/instalacion_postgre_18.PNG)  
-Click `Yes` to the `Would you like us to ... GDAL_DATA...`, yes, yes,....
+Click `Yes` to the `Would you like us to ... GDAL_DATA...`, yes, yes,....  
 ![](./img/instalacion_postgre_19.PNG)  
 ![](./img/instalacion_postgre_20.PNG)  
 ![](./img/instalacion_postgre_21.PNG)  
-Click `Finish` in the Stack Builder window.
+Click `Finish` in the Stack Builder window.  
 ![](./img/instalacion_postgre_22.PNG)  
 
 #### 1.5.3. Verify PostgreSQL and PostGIS Installation Success
-In your `Start Menu` go to `pgAdmin III`. This should bring up an administrative window, with an `Object Browser` on the left side of the window.
+In your `Start Menu` go to `pgAdmin III`. This should bring up an administrative window, with an `Object Browser` on the left side of the window.  
 ![](./img/verificacion_postgre_1.PNG)  
 Double click on the `PostgreSQL x.x (localhost)` server and enter your password (`postgres`).
-Open `Database` tree to look that we have a db called `postgres`.
+Open `Database` tree to look that we have a db called `postgres`.  
 ![](./img/verificacion_postgre_2.PNG)  
 
 ## 2. Create the OSM Database Instance
 Lets add the `C:\Program Files\PostgreSQL\XX\bin` directory  to your Path environment variable.
-Go to `Start > Control Panel > System > Advanced System Settings > Advanced > Environment Variables`. In the `System Variables` section select the `Path` variable and edit it adding what we said earlier.
+Go to `Start > Control Panel > System > Advanced System Settings > Advanced > Environment Variables`. In the `System Variables` section select the `Path` variable and edit it adding what we said earlier.  
 ![](./img/variables_sistema.PNG)  
 
- Open `pgAdmin III` and create a db named `osm` with the following sql syntax:
+ Open `pgAdmin III` and create a db named `osm` with the following sql syntax:  
  ```sql
  CREATE DATABASE osm OWNER postgres ENCODING 'UTF8';
  ```
@@ -140,19 +140,19 @@ psql -U postgres -d osm -f "legacy-postgis-gist.sql"
 Try connecting to the 'osm' database:
 ```cmd
 psql -U postgres -d osm
-```
-![](./img/creacion_db_osm_1.PNG)
+```  
+![](./img/creacion_db_osm_1.PNG)  
 
 * note: to exit that database connection, type: \q
 ## 3. MS4W start-up
 After installing the software, open a command prompt window and cd to the ms4w directory. Execute `setenv.bat`
-Download the Windows binaries from [here](), extract inside our `Program Files` directory and add that directory to our `PATH` environment variable.
-![](./img/variables_sistema.PNG)
+Download the Windows binaries from [here](), extract inside our `Program Files` directory and add that directory to our `PATH` environment variable.  
+![](./img/variables_sistema.PNG)  
 
-Lets test MapServer by calling the CGI executable, with the command: `mapserv -v` which should return some information about it, just something like:
+Lets test MapServer by calling the CGI executable, with the command: `mapserv -v` which should return some information about it, just something like:  
 ![](./img/configuracion_ms4w_1.PNG)  
 Also we need to install Apache. Execute the following command in that same window: `apache-install.bat`.
-Finally open your Web browser (Firefox, Chrome, or Internet Explorer) and goto http://127.0.0.1
+Finally open your Web browser (Firefox, Chrome, or Internet Explorer) and goto http://127.0.0.1  
 ![](./img/muestra_localhost.PNG)  
 
 ## 4. Preparing working directory
@@ -190,7 +190,7 @@ First we must obtain the `MapServer/Basemaps` code through Git. Open a command w
 
 This package uses the a python script and the c preprocessor to build a complete mapfile from a set of templates and styling information. More info about it [here](https://github.com/mapserver/basemaps).
 
-Now we will use a script to modify our table schema in the osm database: cd to the `/basemaps/contrib/` folder, and then execute: `psql -U postgres -d osm -f "osm2pgsql-to-imposm-schema.sql"`
+Now we will use a script to modify our table schema in the osm database: cd to the `/basemaps/contrib/` folder, and then execute: `psql -U postgres -d osm -f "osm2pgsql-to-imposm-schema.sql"`  
 ![](./img/comando_osm2pgsql_7.PNG)  
 
 And again, lets verify that the tables were created, by either using pgAdmin III (StartMenu/Programs/PostgreSQL 9.1/pgAdmin III/) or connect to the database through the commandline and display the table names with the command: `psql -U postgres -d osm -c \d`
@@ -198,7 +198,7 @@ And again, lets verify that the tables were created, by either using pgAdmin III
 ## 8. Generate the OSM Mapfile.
 Configure Basemap Makefiles
 First we need to get the extent of our data, so we will use PostGIS in the command window, execute the following: `psql -U postgres -d osm -c "SELECT ST_extent(way) FROM osm_line"`
-which will return the extents such as:
+which will return the extents such as:  
 ![](./img/comando_extents.PNG)  
 
 Next open the file /basemaps/Makefile in Notepad++
