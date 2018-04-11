@@ -4,7 +4,7 @@
 ### Prerequisites
 * #### Microsoft Visual C++ 2015
 
-* #### Microsoft Visual C++ 2012
+* #### Microsoft Visual C++ 2013
 
 * #### Microsoft Visual C++ 2012
 
