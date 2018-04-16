@@ -28,8 +28,8 @@ Go to [GeoFabrik](https://download.geofabrik.de/) and download the file that you
 Go to your development are with `Cygwin` shell. Get the project using git: `git clone https://github.com/graphhopper/graphhopper.git`.
 Go into `graphhopper` root, and execute this command:
 `./graphhopper.sh -a web -i osm-file.pbf`.  
-![](./img/graphhopper.png)  
+![](./img/graphhopper.PNG)  
 Then go to http://localhost:8989 to start working with it:
-![](./img/graphhopper_1.png)  
+![](./img/graphhopper_1.PNG)  
 Also works with addresses:
-![](./img/graphhopper_2.png)  
+![](./img/graphhopper_2.PNG)  
