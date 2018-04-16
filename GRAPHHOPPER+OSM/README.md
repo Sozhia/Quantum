@@ -1,5 +1,5 @@
 # GRAPHHOPPER & OSM
-![](./img/grp1.png)
+![](./img/grp1.png)  
 GraphHopper is a fast and memory efficient Java routing engine released under Apache License 2.0. Per default it uses OpenStreetMap and GTFS data but can import other data sources.
 
 ## 0.Prerequisites
