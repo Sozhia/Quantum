@@ -11,8 +11,8 @@ Download and execute the installer. Keep defaults.
 ![](./img/instalacion_cygwin_4.PNG)  
 ![](./img/instalacion_cygwin_5.PNG)  
  At `Choose a Download Site` section, select any mirror.  
- ![](./img/instalacion_cygwin_6.PNG)  
- ![](./img/instalacion_cygwin_7.PNG)  
+![](./img/instalacion_cygwin_6.PNG)  
+![](./img/instalacion_cygwin_7.PNG)  
 We need to install `wget` (web category), `git` (devel category) and `unzip` (archive category) on the setup.  
 
 ### 0.2. Java JDK
